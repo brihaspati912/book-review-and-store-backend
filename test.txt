@@ -1,0 +1,13 @@
+POST http://localhost:5000/api/books/create-bookreview/
+Content-Type : application/json
+
+{
+   "title": "Mastering SEO in 2024",
+        "review": "Tips and tricks to boost your SEO and rank higher on search engines.",
+        "category": "marketing",
+        "trending": true,
+        "coverImage": "animal-farm.jpeg",
+        "oldPrice": 39.99,
+        "newPrice": 29.99,
+        "author":"Raushan"
+}
