@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 const bookRoutes = require("./src/books/books-routes.js");
 app.use("/api/books/", bookRoutes)
 const bookReviewRoutes = require("./src/reviews/books.review.routes.js");
-app.use("/api/books/", bookReviewRoutes)
+app.use("/api/book-reviews/", bookReviewRoutes)
 
 
 app.use('/', (req, res) => {

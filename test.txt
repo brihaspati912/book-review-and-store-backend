@@ -1,13 +1,15 @@
-POST http://localhost:5000/api/books/create-bookreview/
+DELETE http://localhost:5000/api/books
+/delete/692ab2879bdeb728f2ee6fa3
+
 Content-Type : application/json
 
 {
-   "title": "Mastering SEO in 2024",
-        "review": "Tips and tricks to boost your SEO and rank higher on search engines.",
-        "category": "marketing",
-        "trending": true,
-        "coverImage": "animal-farm.jpeg",
-        "oldPrice": 39.99,
-        "newPrice": 29.99,
-        "author":"Raushan"
+    "title": "Best eCommerce Platforms updated",
+        "review": "A comprehensive guide on choosing the best eCommerce platforms for 2024.",
+        "category": "business",
+        "trending": false,
+        "coverImage": "doriangrey.webp",
+        "oldPrice": 49.99,
+        "newPrice": 39.99,
+        "author":"scahink updated"
 }

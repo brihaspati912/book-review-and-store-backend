@@ -1,24 +1,41 @@
-# Logs
-logs
-*.log
+# Node.js dependencies
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+.pnp/
+.pnp.js
 
-node_modules
-dist
-dist-ssr
-*.local
+# Build artifacts
+dist/
+build/
+out/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE and OS specific files
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Test coverage reports
+coverage/
+
+# Uploaded files (if applicable)
+uploads/
+
+# Frontend specific (if separated)
+# If your frontend is in a separate directory (e.g., client/),
+# you might have a separate .gitignore there, but common ones
+# can be included here if using a monorepo structure.
+# client/node_modules/
+# client/build/
