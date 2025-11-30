@@ -13,18 +13,33 @@ const { postABook, getAllBooks, getABook, updateABook, deleteABook } = require('
 //frontend => backend server => controller => BookSchema => database => back to frontend.
 
 //post= when submit data from frontend to backend
+/* POST http://localhost:5000/api/books/create-book
+Content-Type : application/json
+
+{
+     "title": "How to Grow Your Online Store",
+        "description": "Learn the best strategies to grow your online store in today's competitive market.",
+        "author":"raushan",
+        "category": "business",
+        "trending": true,
+        "coverImage": "dracula.jpeg",
+        "oldPrice": 29.99,
+        "newPrice": 19.99
+}*/
+
+//1.Post a book
 router.post("/create-book", postABook)
 
-//get all books
+//2.get all books
 router.get("/", getAllBooks)
 
-//get a single book
+//3.get a single book
 router.get("/:id", getABook)
 
-//update a book
+//4.update a book
 router.put("/edit/:id", updateABook)
 
-//Delete a book // http://localhost:5000/api/books/delete/692ab2879bdeb728f2ee6fa3
+//5.Delete a book // http://localhost:5000/api/books/delete/692ab2879bdeb728f2ee6fa3
 
 router.delete("/delete/:id", deleteABook)
 

@@ -1,15 +1,13 @@
-DELETE http://localhost:5000/api/books
-/delete/692ab2879bdeb728f2ee6fa3
-
+POST http://localhost:5000/api/books/create-book
 Content-Type : application/json
 
 {
-    "title": "Best eCommerce Platforms updated",
-        "review": "A comprehensive guide on choosing the best eCommerce platforms for 2024.",
-        "category": "business",
-        "trending": false,
-        "coverImage": "doriangrey.webp",
-        "oldPrice": 49.99,
-        "newPrice": 39.99,
-        "author":"scahink updated"
-}
+"title": "1984",
+  "description": "A dystopian novel depicting a totalitarian regime that controls truth, history, and individual freedom.",
+  "category": "dystopia",
+  "trending": true,
+  "coverImage": "1984.webp",
+  "oldPrice": 34.99,
+  "newPrice": 24.99,
+  "author": "George Orwell"
+  }
