@@ -1,15 +1,1 @@
-POST http://localhost:5000/api/books/create-book
-Content-Type : application/json
-
-{
-
- "title": "The Odyssey",
-  "description": "Homer's epic poem following the hero Odysseus on his long journey home.",
-  "author": "Homer",
-  "category": "epic",
-  "trending": false,
-  "coverImage": "odyssey.jpeg",
-  "newPrice": 750,
-  "oldPrice": 800
-}
-  
+GET http://localhost:5000/api/book-reviews/

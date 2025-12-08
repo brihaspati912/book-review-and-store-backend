@@ -1,13 +1,25 @@
-POST http://localhost:5000/api/books/create-book
+POST http: //localhost:5000/api/books/create-book
 Content-Type : application/json
 
 {
-"title": "1984",
-  "description": "A dystopian novel depicting a totalitarian regime that controls truth, history, and individual freedom.",
-  "category": "dystopia",
-  "trending": true,
-  "coverImage": "1984.webp",
-  "oldPrice": 34.99,
-  "newPrice": 24.99,
-  "author": "George Orwell"
-  }
+    "title": "1984",
+    "description": "A dystopian novel depicting a totalitarian regime that controls truth, history, and individual freedom.",
+    "category": "dystopia",
+    "trending": true,
+    "coverImage": "1984.webp",
+    "oldPrice": 34.99,
+    "newPrice": 24.99,
+    "author": "George Orwell"
+}
+
+
+  {
+    "title": "The Odyssey",
+    "description": "Homer's epic poem following the hero Odysseus on his long journey home.",
+    "author": "Homer",
+    "category": "epic",
+    "trending": false,
+    "coverImage": "odyssey.jpeg",
+    "newPrice": 750,
+    "oldPrice": 800
+}
