@@ -1,0 +1,13 @@
+POST http://localhost:5000/api/books/create-book
+Content-Type : application/json
+
+{
+"title": "1984",
+  "description": "A dystopian novel depicting a totalitarian regime that controls truth, history, and individual freedom.",
+  "category": "dystopia",
+  "trending": true,
+  "coverImage": "1984.webp",
+  "oldPrice": 34.99,
+  "newPrice": 24.99,
+  "author": "George Orwell"
+  }

@@ -35,7 +35,7 @@ const getAllBooks = async (req, res) => {
 const getABook = async (req, res) => {
     try {
         const { id } = req.params;
-        const book = await Book.findById(id).sort({ createdAt: -1 });
+        const book = await Book.findById(id);
         if (!book) {
             res.status(404).send({ message: "Book not found " })
         }
