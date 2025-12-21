@@ -23,7 +23,9 @@ main().then(() => { console.log("Mongodb connected") }).catch(err => console.log
 app.use(express.json()); //to parse json data
 app.use(cors({
     origin: "http://localhost:5173",
-    credentials: true
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 app.use(express.urlencoded({ extended: true }));
@@ -32,15 +34,32 @@ app.use(express.urlencoded({ extended: true }));
 //routes
 const bookRoutes = require("./src/books/books-routes.js");
 app.use("/api/books/", bookRoutes)
+
+const orderRoutes = require("./src/books/orders/order.route.js");
+app.use("/api/orders/", orderRoutes)
+
 const bookReviewRoutes = require("./src/reviews/books.review.routes.js");
 app.use("/api/book-reviews/", bookReviewRoutes)
 
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Hello Book-store Raushan backend!')
 })
 
+/*
+app.all('*', (req, res) => {
+    res.status(404).json({ error: 'Route not found' });
+});*/
 
+app.use((req, res, next) => {
+    res.status(404).json({ error: `Cannot find ${req.originalUrl} on this server` });
+});
+
+// Error-handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ error: 'Internal Server Error', details: err.message });
+});
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port} || click on this link http://localhost:${port}`);
