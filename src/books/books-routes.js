@@ -28,7 +28,10 @@ Content-Type : application/json
 }*/
 
 //1.Post a book
-router.post("/create-book", postABook)
+//router.post("/create-book", postABook)
+//if you want to give access to only admin us token
+
+router.post("/create-book", verifyAdminToken, postABook)
 
 //2.get all books
 router.get("/", getAllBooks)
@@ -37,10 +40,10 @@ router.get("/", getAllBooks)
 router.get("/:id", getABook)
 
 //4.update a book
-router.put("/edit/:id", updateABook)
+router.put("/edit/:id", verifyAdminToken, updateABook)
 
 //5.Delete a book // http://localhost:5000/api/books/delete/692ab2879bdeb728f2ee6fa3
 
-router.delete("/delete/:id", deleteABook)
+router.delete("/delete/:id", verifyAdminToken, deleteABook)
 
 module.exports = router;

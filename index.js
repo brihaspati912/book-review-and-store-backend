@@ -41,6 +41,10 @@ app.use("/api/orders/", orderRoutes)
 const bookReviewRoutes = require("./src/reviews/books.review.routes.js");
 app.use("/api/book-reviews/", bookReviewRoutes)
 
+//users routes
+const userRoutes = require("./src/books/orders/users.route.js");
+app.use("/api/users/", userRoutes)
+
 
 app.get('/', (req, res) => {
     res.send('Hello Book-store Raushan backend!')
