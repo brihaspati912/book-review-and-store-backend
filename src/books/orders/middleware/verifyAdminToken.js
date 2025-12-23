@@ -16,3 +16,4 @@ const verifyAdminToken = (req, res, next) => {
         next()
     })
 }
+module.exports = { verifyAdminToken };
