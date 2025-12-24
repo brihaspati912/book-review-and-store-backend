@@ -46,6 +46,10 @@ const userRoutes = require("./src/books/orders/users.route.js");
 app.use("/api/users/", userRoutes)
 
 
+//admin stats routes
+const adminStatusRoutes = require("./src/books/orders/middleware/stats/admin.stats.js");
+app.use("/api/admin/stats/", adminStatusRoutes)
+
 app.get('/', (req, res) => {
     res.send('Hello Book-store Raushan backend!')
 })
