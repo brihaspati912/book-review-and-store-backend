@@ -24,6 +24,9 @@ const bookReviewSchema = new mongoose.Schema({
     coverImage: {
         type: String,
 
+    }, rating: {
+        type: Number
+
     },
     newPrice: {
         type: Number,
