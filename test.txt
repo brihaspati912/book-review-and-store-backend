@@ -1,7 +1,1 @@
-POST http://localhost:5000/api/users/admin
-Content-Type: application/json
-
-{
- "userName":"admin",
- "password":"123456"
-}
+GET http://localhost:5000/api/book-reviews/694c6bd31be925635d8fe391
