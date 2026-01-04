@@ -33,6 +33,8 @@ coverage/
 # Uploaded files (if applicable)
 uploads/
 
+text_files/
+
 # Frontend specific (if separated)
 # If your frontend is in a separate directory (e.g., client/),
 # you might have a separate .gitignore there, but common ones
