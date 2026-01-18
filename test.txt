@@ -1,1 +1,0 @@
-GET http://localhost:5000/api/book-reviews/694c6bd31be925635d8fe391
