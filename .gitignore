@@ -33,7 +33,7 @@ coverage/
 # Uploaded files (if applicable)
 uploads/
 
-text_files/
+text_files/*.txt
 
 # Frontend specific (if separated)
 # If your frontend is in a separate directory (e.g., client/),
