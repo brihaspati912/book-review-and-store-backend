@@ -23,7 +23,7 @@ main().then(() => { console.log("Mongodb connected") }).catch(err => console.log
 //middleware
 app.use(express.json()); //to parse json data
 app.use(cors({
-    origin: ["http://localhost:5173", "https://books-review-and-store-hsr7.vercel.app"],
+    origin: ["http://localhost:5173", "https://books-review-and-store.vercel.app"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
